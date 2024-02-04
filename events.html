@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+        .mt10 {
+            margin-top: 10px;
+        }
+
+        .mb0 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0 0 10px;
+        }
+
+        .icon-time {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 5px;
+        }
+
+        .icon-time,
+        .icon-location {
+            font-family: "Arial", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        h2,
+        h3,
+        a {
+            color: #070707;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 1.45em;
+
+        }
+
+        .main-nav {
+            margin-top: 5px;
+
+        }
+
+        .logo a {
+            color: black;
+        }
+
+        .logo a,
+        .main-nav a {
+            padding: 10px 15px;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+        }
+
+        .main-nav a {
+            color: #090909;
+            font-size: .99em;
+        }
+
+        .main-nav a:hover {
+            color: #080808;
+        }
+
+        .header {
+            padding-top: .5em;
+            padding-bottom: .5em;
+            border: 1px solid #a2a2a2;
+            background-color: #f4f4f4;
+            -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        @media (min-width: 769px) {
+
+            .header,
+            .main-nav {
+                display: flex;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+
+                .header {
+                    width: 80%;
+                    margin: 0 auto;
+                    max-width: 1150px;
+                }
+            }
+
+        }
+
+        @media (min-width: 1025px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo"><a href="#">EXPLORE BLACK</a></h1>
+        <ul class="main-nav">
+            <li><a href="events">Events</a></li>
+            <li><a href="blogs">Blogs</a></li>
+            <li><a href="chat">Chat</a></li>
+            <li><a href={{ url_for('logout') }}>Logout</a></li>
+        </ul>
+    </header>
+
+    <div class="w3-content" style="max-width: 1100px">
+
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="https://baucemag.com/wp-content/uploads/image1-1.jpg" class="w3-round w3-image w3-opacity-min"
+                    alt="Table Setting" width="400" height="400" />
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h2 class="w3-center">
+                    Ladies, Join The Black Women Things Community!
+                </h2>
+
+                <h5 class="w3-center">Details:</h5>
+                <p class="w3-large mt10 mb0">
+                    <i class="icon-time mr5">&#128336;</i>
+                    Thu Jan 25 2024 at 08:00 pm to Thu Feb 22 2024 at 09:00 pm
+                </p>
+                <p class="w3-large mb0">
+                    <i class="icon-location mr5">&#128205;</i>
+                    Cary, United States
+                </p>
+                <br>
+                <div style="text-align: center;">
+                    <a href="https://www.eventbrite.com/e/ladies-join-the-black-women-things-community-tickets-800103851157"
+                        target="_blank" class="w3-button w3-black">More Info</a>
+                </div>
+            </div>
+        </div>
+        <div class="w3-content" style="max-width: 1100px">
+            <div class="w3-row w3-padding-60" id="about-left">
+                <div class="w3-col m6 w3-padding-large">
+                    <h2 class="w3-center">
+                        Step Afrika!
+                    </h2>
+
+                    <h5 class="w3-center">Details:</h5>
+                    <p class="w3-large mt10 mb0">
+                        <i class="icon-time mr5">&#128336;</i>
+                        Fri, Feb 9, 8 – 10 PM
+                    </p>
+                    <p class="w3-large mb0">
+                        <i class="icon-location mr5">&#128205;</i>
+                        Virtual
+                    </p>
+
+                    <br>
+                    <div style="text-align: center;">
+                        <a href="https://www.stepafrika.org/" target="_blank" class="w3-button w3-black">More Info</a>
+                    </div>
+                </div>
+
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="https://media.npr.org/assets/img/2020/01/10/stepafrika-cc53b7bb37f1533e2eddd8c553ddf8a274da6ce9-s1100-c50.jpg"
+                        class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="400" height="400" />
+                </div>
+            </div>
+
+            <div class="w3-row w3-padding-64" id="about">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="https://cdn-az.allevents.in/events4/banners/4d42b9d2b18abcc5d05fbed291910d7b49b35907bc342176d4870587faa1c2fb-rimg-w960-h583-gmir.jpg?v=1706754721"
+                        class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="400" height="400" />
+                </div>
+
+                <div class="w3-col m6 w3-padding-large">
+                    <h2 class="w3-center">
+                        WE RISE !!!
+                    </h2>
+
+                    <h5 class="w3-center">Details:</h5>
+                    <p class="w3-large mt10 mb0">
+                        <i class="icon-time mr5">&#128336;</i>
+                        Sat, Feb 24, 7 – 9 PM
+                    </p>
+                    <p class="w3-large mb0">
+                        <i class="icon-location mr5">&#128205;</i>
+                        Durham, NC
+                    </p>
+
+                    <br>
+                    <div style="text-align: center;">
+                        <a href="https://allevents.in/wilson/we-rise/200026032670401" target="_blank"
+                            class="w3-button w3-black">More Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-content" style="max-width: 1100px">
+                <div class="w3-row w3-padding-60" id="about-left">
+                    <div class="w3-col m6 w3-padding-large">
+                        <h2 class="w3-center">
+                            EXCELLENCE: A Dedication to Black Queer Culture
+                        </h2>
+
+                        <h5 class="w3-center">Details:</h5>
+                        <p class="w3-large mt10 mb0">
+                            <i class="icon-time mr5">&#128336;</i>
+                            Sat, Feb 17, 8 – 11 PM
+                        </p>
+                        <p class="w3-large mb0">
+                            <i class="icon-location mr5">&#128205;</i>
+                            Virtual
+                        </p>
+                        <br>
+                        <div style="text-align: center;">
+                            <a href="https://sickening.events/e/excellence-a-dedication-to-black-queer-culture"
+                                target="_blank" class="w3-button w3-black">More Info</a>
+                        </div>
+                    </div>
+
+                    <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="https://images.paramount.tech/uri/mgid:arc:imageassetref:bet.com:49388077-f496-11eb-84ca-0e0dce71f2a5?quality=0.7&gen=ntrn&legacyStatusCode=true"
+                            class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="400" height="500" />
+                    </div>
+                </div>
+                <hr />
+                <hr />
+            </div>
+</body>
+
+</html>

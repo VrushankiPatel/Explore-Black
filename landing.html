@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Landing Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      display: block;
+      background-image: url('https://thedrum-media.imgix.net/thedrum-prod/s3/news/tmp/637022/bhm23_2.png?w=1280&ar=default&fit=crop&crop=faces,edges&auto=format');
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .centered-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .btn {
+      padding: 20px 50px;
+      background: black;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      text-decoration: none;
+      font-size: 1.6em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="centered-content">
+    <a href="home" class="btn">Dive Into Black Heritage</a>
+  </div>
+</body>
+
+</html>
