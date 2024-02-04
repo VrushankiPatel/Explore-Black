@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Template</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .chat-container {
+            background-image: url('https://img.freepik.com/premium-photo/black-people-vibrant-colors-black-background-black-matters_582637-2841.jpg');
+            width: 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .chat-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+
+        }
+
+        .chat-box h2 {
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 32px;
+        }
+
+        .chat-box input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-box input[type="submit"] {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .chat-box input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chat-container">
+        <div class="chat-box">
+            <h2>Let's Connect!</h2>
+            <form action="/submit-your-name" method="post">
+                <input type="text" name="name" placeholder="Unique Code:" required>
+                <input type="text" name="nickname" placeholder="Nickname" required>
+                <input type="submit" value="GO">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
