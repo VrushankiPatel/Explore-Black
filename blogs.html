@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>blogs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: "Montserrat", sans-serif;
+			line-height: 1.6;
+			margin: 0;
+			min-height: 100vh;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		h2,
+		h3,
+		a {
+			color: #34495e;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.logo {
+			margin: 0;
+			font-size: 1.45em;
+		}
+
+		.main-nav {
+			margin-top: 5px;
+		}
+
+		.logo a,
+		.main-nav a {
+			padding: 10px 15px;
+			text-transform: uppercase;
+			text-align: center;
+			display: block;
+		}
+
+		.main-nav a {
+			color: #34495e;
+			font-size: 0.99em;
+		}
+
+		.main-nav a:hover {
+			color: #718daa;
+		}
+
+		.header {
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			border: 1px solid #a2a2a2;
+			background-color: #f4f4f4;
+			-webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+			box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+
+		@media (min-width: 769px) {
+
+			.header,
+			.main-nav {
+				display: flex;
+			}
+
+			.header {
+				flex-direction: column;
+				align-items: center;
+
+				.header {
+					width: 80%;
+					margin: 0 auto;
+					max-width: 1150px;
+				}
+			}
+		}
+
+		@media (min-width: 1025px) {
+			.header {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+
+		.fx .fx .DiscoverFeed__button-login {
+			padding-bottom: 7px;
+			padding-top: 7px;
+		}
+
+		.ajrOX22m3F6ipS8GzKHs {
+			float: right;
+			margin-left: 0.5rem;
+		}
+
+		.iGGsxbNmuvNFfDqFfu2w {
+			--feedly-button-color-background: var(--semanticColorBackgroundMedium);
+			--feedly-button-color-border: var(--semanticColorBorderMedium);
+			--feedly-button-color-text: var(--semanticColorContentMedium);
+			background-color: rgba(0, 0, 0, 0);
+			border-color: var(--feedly-button-color-border);
+			color: var(--feedly-button-color-text);
+		}
+
+		.HpfjfDvNq7dU0VmCDlEn {
+			text-transform: uppercase;
+		}
+
+		.zwPp9DCWpO_pA0T1FkGM {
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			align-items: center;
+			display: inline-flex;
+			gap: 0.5rem;
+			justify-content: center;
+			font-family: inherit;
+			font-weight: 700;
+			-webkit-text-decoration: none;
+			text-decoration: none;
+			font-size: 12px;
+			line-height: 1rem;
+			margin: 0;
+			padding: 11px 17px;
+			border: 1px solid rgba(0, 0, 0, 0);
+			border-radius: 4px;
+			cursor: pointer;
+			text-align: center;
+			vertical-align: top;
+			min-width: 50px;
+			box-sizing: border-box;
+			letter-spacing: 0;
+			box-shadow: none;
+			outline: 0;
+			transition: background-color 0.2s linear, color 0.2s linear;
+			background-color: rgba(0, 0, 0, 0);
+			border-color: black;
+		}
+
+		.zwPp9DCWpO_pA0T1FkGM:hover {
+			background-color: darkgreen;
+			color: white;
+			/* Change text color on hover */
+		}
+
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+
+		.readdown-desktop-banner {
+			max-height: 380px;
+			width: 100%;
+			height: 380px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			margin: auto;
+			display: block;
+			background-color: #fff;
+			background-size: cover;
+			background-image: url(https://cdn.kastatic.org/ka-perseus-images/b0282b67a5b51a127d8b9d713b1c4f9cd401bc54.gif);
+		}
+
+		.read-down-title {
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			--wp--preset--font-size--normal: 16px;
+			--wp--preset--font-size--huge: 42px;
+			visibility: visible;
+			list-style-type: none;
+			text-align: center;
+			box-sizing: border-box;
+			-webkit-font-smoothing: antialiased;
+			text-shadow: none;
+			text-rendering: optimizeLegibility;
+			font-weight: 500;
+			color: inherit;
+			font-family: "Shift-Book";
+			font-size: 44px;
+			line-height: 53px;
+			margin: 0;
+			letter-spacing: 0;
+			max-width: 700px;
+		}
+
+		.read-down-content-inner {
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			--wp--preset--font-size--normal: 16px;
+			--wp--preset--font-size--huge: 42px;
+			font-family: "Fort-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.42857143;
+			color: #333;
+			visibility: visible;
+			list-style-type: none;
+			box-sizing: border-box;
+			-webkit-font-smoothing: antialiased;
+			text-shadow: none;
+			text-rendering: optimizeLegibility;
+			align-items: center;
+			max-width: 822px;
+			width: 100%;
+			z-index: 100;
+			display: flex;
+			flex-direction: column;
+			background-color: #ffffff;
+			box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.12);
+			padding: 40px 15px 40px 15px;
+			text-align: center;
+			margin-top: -180px;
+			justify-content: center;
+		}
+
+		.centered {
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="logo"><a href="#">EXPLORE BLACK</a></h1>
+		<ul class="main-nav">
+			<li><a href="events">Events</a></li>
+			<li><a href="blogs">Blogs</a></li>
+			<li><a href="chat">Chat</a></li>
+			<li><a href={{ url_for('logout') }}>Logout</a></li>
+		</ul>
+	</header>
+	<div class="readdown-desktop-banner"></div>
+	<br />
+	<br />
+
+	<div class="centered read-down-content">
+		<div class="read-down-content-inner">
+			<h1 class="read-down-title">Blogs</h1>
+			<h2 class="read-down-text"></h2>
+		</div>
+	</div>
+
+	<div class="w3-content">
+		<div class="w3-row w3-margin">
+			<div class="w3-third">
+				<img src="https://storage.googleapis.com/site-assets/hVOzfnyTvkAMtb_I2yWe8Q1Th9JFtiHbLuRH9BzWmtc_visual-17eb988d84f"
+					style="width: 40%; min-height: 100px" />
+			</div>
+			<div class="w3-twothird w3-container">
+				<div class="DiscoverFeed__content">
+					<h2>TheGrio</h2>
+
+					<button type="button"
+						class="zwPp9DCWpO_pA0T1FkGM iGGsxbNmuvNFfDqFfu2w DiscoverFeed__button-login m-l-2 ajrOX22m3F6ipS8GzKHs HpfjfDvNq7dU0VmCDlEn ttd9OnxwNDCiFtsXMqqf"
+						onclick="window.open('https://thegrio.com/', '_blank')">
+						<span class="blQjnLwjSxWlVyP2KjQg">READ NOW</span>
+					</button>
+
+					<div class="DiscoverFeed__metadata">
+						<span>#1 most popular black blog</span><br />
+					</div>
+					<div class="DiscoverFeed__description item-description">
+						African-American Breaking News and Opinion <br />
+						4K followers | 134 articles per week
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-row w3-margin">
+			<div class="w3-third">
+				<img src="https://storage.googleapis.com/site-assets/O2kVem6bJZhleM-o6hSpOnPcPopVllvHVSv0YrLWRBs_visual-1692ec923b9"
+					style="width: 40%; min-height: 100px" />
+			</div>
+			<div class="w3-twothird w3-container">
+				<div class="DiscoverFeed__content">
+					<h3 class="bgr6M8LczKBmaAn4sO0X VRDKEqZBBGhYJpssu9A9 m-a-0" id="">
+						<a class="M_plfet2nk5hSEutAwZA item-header item-header--link jtFbqIi4cr2NH1cMeDTP">NewsOne</a>
+					</h3>
+
+					<button type="button"
+						class="zwPp9DCWpO_pA0T1FkGM iGGsxbNmuvNFfDqFfu2w DiscoverFeed__button-login m-l-2 ajrOX22m3F6ipS8GzKHs HpfjfDvNq7dU0VmCDlEn ttd9OnxwNDCiFtsXMqqf"
+						onclick="window.open('https://newsone.com/', '_blank')">
+						<span class="blQjnLwjSxWlVyP2KjQg">READ NOW</span>
+					</button>
+
+					<div class="DiscoverFeed__metadata">
+						<span>#2 most popular black blog</span><br />
+					</div>
+					<div class="DiscoverFeed__description item-description">
+						Breaking News for Black America | Racial and Social Justice,
+						Politics, National News, Entertainment News <br />
+						1K followers | 37 articles per week
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-row w3-margin">
+			<div class="w3-third">
+				<img src="https://storage.googleapis.com/site-assets/fxYSCaaubShCSKl_jKfFbNw9RiT1TVWbE19qHlXCTZk_visual-17202a7572f"
+					style="width: 40%; min-height: 100px" />
+			</div>
+			<div class="w3-twothird w3-container">
+				<div class="DiscoverFeed__content">
+					<h3 class="bgr6M8LczKBmaAn4sO0X VRDKEqZBBGhYJpssu9A9 m-a-0" id="">
+						<a class="M_plfet2nk5hSEutAwZA item-header item-header--link jtFbqIi4cr2NH1cMeDTP">Black America
+							Web</a>
+					</h3>
+
+					<button type="button"
+						class="zwPp9DCWpO_pA0T1FkGM iGGsxbNmuvNFfDqFfu2w DiscoverFeed__button-login m-l-2 ajrOX22m3F6ipS8GzKHs HpfjfDvNq7dU0VmCDlEn ttd9OnxwNDCiFtsXMqqf"
+						onclick="window.open('https://blackamericaweb.com/', '_blank')">
+						<span class="blQjnLwjSxWlVyP2KjQg">READ NOW</span>
+					</button>
+
+					<div class="DiscoverFeed__metadata">
+						<span>#3 most popular black blog</span><br />
+					</div>
+					<div class="DiscoverFeed__description item-description">
+						Your one stop for all things Black America! | Breaking national
+						news, <br />
+						1K followers | 112 articles per week
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-row w3-margin">
+			<div class="w3-third">
+				<img src="https://storage.googleapis.com/site-assets/sn_xF6Vt-kfMKDGCNy1lHfOSSHoft12lL4muG4jAXok_visual-18611e4218c"
+					style="width: 40%; min-height: 100px" />
+			</div>
+			<div class="w3-twothird w3-container">
+				<div class="DiscoverFeed__content">
+					<h3 class="bgr6M8LczKBmaAn4sO0X VRDKEqZBBGhYJpssu9A9 m-a-0" id="">
+						<a class="M_plfet2nk5hSEutAwZA item-header item-header--link jtFbqIi4cr2NH1cMeDTP">The Root</a>
+					</h3>
+
+					<button type="button"
+						class="zwPp9DCWpO_pA0T1FkGM iGGsxbNmuvNFfDqFfu2w DiscoverFeed__button-login m-l-2 ajrOX22m3F6ipS8GzKHs HpfjfDvNq7dU0VmCDlEn ttd9OnxwNDCiFtsXMqqf"
+						onclick="window.open('https://theroot.com/', '_blank')">
+						<span class="blQjnLwjSxWlVyP2KjQg">READ NOW</span>
+					</button>
+
+					<div class="DiscoverFeed__metadata">
+						<span>#4 most popular black blog</span><br />
+					</div>
+					<div class="DiscoverFeed__description item-description">
+						Black News and Black Views with a Whole Lotta Attitude <br />
+						12K followers | 97 articles per week
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-row w3-margin">
+			<div class="w3-third">
+				<img src="https://storage.googleapis.com/site-assets/b8zBHr_TraTXxgb1Dcj5xmaCl4JTVChya2LKmbPGkKU_visual-16503cc31a1"
+					style="width: 40%; min-height: 100px" />
+			</div>
+			<div class="w3-twothird w3-container">
+				<div class="DiscoverFeed__content">
+					<h3 class="bgr6M8LczKBmaAn4sO0X VRDKEqZBBGhYJpssu9A9 m-a-0" id="">
+						<a class="M_plfet2nk5hSEutAwZA item-header item-header--link jtFbqIi4cr2NH1cMeDTP">Atlanta Black
+							Star</a>
+					</h3>
+
+					<button type="button"
+						class="zwPp9DCWpO_pA0T1FkGM iGGsxbNmuvNFfDqFfu2w DiscoverFeed__button-login m-l-2 ajrOX22m3F6ipS8GzKHs HpfjfDvNq7dU0VmCDlEn ttd9OnxwNDCiFtsXMqqf"
+						onclick="window.open('https://atlantablackstar.com/', '_blank')">
+						<span class="blQjnLwjSxWlVyP2KjQg">READ NOW</span>
+					</button>
+
+					<div class="DiscoverFeed__metadata">
+						<span>#5 most popular black blog</span><br />
+					</div>
+					<div class="DiscoverFeed__description item-description">
+						Black News, Business, Politics, Culture & More <br />
+						1K followers | 82 articles per week
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-row w3-margin">
+			<div class="w3-third">
+				<img src="https://storage.googleapis.com/site-assets/86cv5F3Jd3FYkxcTbuenrFURFyPoWWPCBe_rb5DvkAw_visual-173a3e12ed5"
+					style="width: 40%; min-height: 100px" />
+			</div>
+			<div class="w3-twothird w3-container">
+				<div class="DiscoverFeed__content">
+					<h3 class="bgr6M8LczKBmaAn4sO0X VRDKEqZBBGhYJpssu9A9 m-a-0" id="">
+						<a class="M_plfet2nk5hSEutAwZA item-header item-header--link jtFbqIi4cr2NH1cMeDTP">Blavity</a>
+					</h3>
+
+					<button type="button"
+						class="zwPp9DCWpO_pA0T1FkGM iGGsxbNmuvNFfDqFfu2w DiscoverFeed__button-login m-l-2 ajrOX22m3F6ipS8GzKHs HpfjfDvNq7dU0VmCDlEn ttd9OnxwNDCiFtsXMqqf"
+						onclick="window.open('https://blavity.com/', '_blank')">
+						<span class="blQjnLwjSxWlVyP2KjQg">READ NOW</span>
+					</button>
+
+					<div class="DiscoverFeed__metadata">
+						<span>#6 most popular black blog</span><br />
+					</div>
+					<div class="DiscoverFeed__description item-description">
+						Your #1 Resource for Black Entrepreneurs, Professionals and Small
+						<br />
+						1K followers | 79 articles per week
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

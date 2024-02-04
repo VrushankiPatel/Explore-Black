@@ -1,0 +1,636 @@
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+	li {
+		perspective: 400px;
+	}
+
+	.info {
+		transform: rotate3d(1, 0, 0, 90deg);
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 4px;
+		pointer-events: none;
+		background-color: rgba(7, 7, 7, 0.9);
+	}
+
+	.in-top .info {
+		transform-origin: 50% 0%;
+		-webkit-animation: in-top 300ms ease 0ms 1 forwards;
+		animation: in-top 300ms ease 0ms 1 forwards;
+	}
+
+	.in-right .info {
+		transform-origin: 100% 0%;
+		-webkit-animation: in-right 300ms ease 0ms 1 forwards;
+		animation: in-right 300ms ease 0ms 1 forwards;
+	}
+
+	.in-bottom .info {
+		transform-origin: 50% 100%;
+		-webkit-animation: in-bottom 300ms ease 0ms 1 forwards;
+		animation: in-bottom 300ms ease 0ms 1 forwards;
+	}
+
+	.in-left .info {
+		transform-origin: 0% 0%;
+		-webkit-animation: in-left 300ms ease 0ms 1 forwards;
+		animation: in-left 300ms ease 0ms 1 forwards;
+	}
+
+	.out-top .info {
+		transform-origin: 50% 0%;
+		-webkit-animation: out-top 300ms ease 0ms 1 forwards;
+		animation: out-top 300ms ease 0ms 1 forwards;
+	}
+
+	.out-right .info {
+		transform-origin: 100% 50%;
+		-webkit-animation: out-right 300ms ease 0ms 1 forwards;
+		animation: out-right 300ms ease 0ms 1 forwards;
+	}
+
+	.out-bottom .info {
+		transform-origin: 50% 100%;
+		-webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
+		animation: out-bottom 300ms ease 0ms 1 forwards;
+	}
+
+	.out-left .info {
+		transform-origin: 0% 0%;
+		-webkit-animation: out-left 300ms ease 0ms 1 forwards;
+		animation: out-left 300ms ease 0ms 1 forwards;
+	}
+
+	@-webkit-keyframes in-top {
+		from {
+			transform: rotate3d(-1, 0, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@keyframes in-top {
+		from {
+			transform: rotate3d(-1, 0, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@-webkit-keyframes in-right {
+		from {
+			transform: rotate3d(0, -1, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@keyframes in-right {
+		from {
+			transform: rotate3d(0, -1, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@-webkit-keyframes in-bottom {
+		from {
+			transform: rotate3d(1, 0, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@keyframes in-bottom {
+		from {
+			transform: rotate3d(1, 0, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@-webkit-keyframes in-left {
+		from {
+			transform: rotate3d(0, 1, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@keyframes in-left {
+		from {
+			transform: rotate3d(0, 1, 0, 90deg);
+		}
+
+		to {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+	}
+
+	@-webkit-keyframes out-top {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(-1, 0, 0, 104deg);
+		}
+	}
+
+	@keyframes out-top {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(-1, 0, 0, 104deg);
+		}
+	}
+
+	@-webkit-keyframes out-right {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(0, -1, 0, 104deg);
+		}
+	}
+
+	@keyframes out-right {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(0, -1, 0, 104deg);
+		}
+	}
+
+	@-webkit-keyframes out-bottom {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(1, 0, 0, 104deg);
+		}
+	}
+
+	@keyframes out-bottom {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(1, 0, 0, 104deg);
+		}
+	}
+
+	@-webkit-keyframes out-left {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(0, 1, 0, 104deg);
+		}
+	}
+
+	@keyframes out-left {
+		from {
+			transform: rotate3d(0, 0, 0, 0deg);
+		}
+
+		to {
+			transform: rotate3d(0, 1, 0, 104deg);
+		}
+	}
+
+
+	ul:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	li {
+		position: relative;
+		float: left;
+
+		padding: 0;
+		list-style: none;
+	}
+
+	li a {
+		display: inline-block;
+		vertical-align: top;
+		text-decoration: none;
+		border-radius: px;
+	}
+
+	li h3 {
+		margin: 0;
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	li p {
+		font-size: 12px;
+		line-height: 1.5;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+	li .normal {
+		width: 100%;
+		height: 100%;
+		background-color: #ecf0f1;
+		color: rgba(52, 73, 94, 0.6);
+		box-shadow: inset 0 2px 5px #e6ebed;
+		text-align: center;
+	}
+
+	li .normal svg {
+		pointer-events: none;
+		width: 50px;
+	}
+
+	li .normal svg path {
+		fill: rgba(52, 73, 94, 0.2);
+	}
+
+	body {
+		background-color: #fff;
+	}
+
+	h1 {
+		margin: 0 auto 5px;
+		text-align: center;
+	}
+
+	h3 {
+		font-family: "Bree Serif", serif;
+	}
+
+	.container {
+		width: 840px;
+		margin: 0 auto;
+	}
+
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: 'Montserrat', sans-serif;
+		line-height: 1.6;
+		margin: 0;
+		min-height: 100vh;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	h2,
+	h3,
+	a {
+		color: #111212;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.logo {
+		margin: 0;
+		font-size: 1.45em;
+	}
+
+	.main-nav {
+		margin-top: 5px;
+
+	}
+
+	.logo a,
+	.main-nav a {
+		padding: 10px 15px;
+		text-transform: uppercase;
+		text-align: center;
+		display: block;
+	}
+
+	.main-nav a {
+		color: #0a0a0a;
+		font-size: .99em;
+	}
+
+	.main-nav a:hover {
+		color: #0f0f10;
+	}
+
+	.header {
+		padding-top: .5em;
+		padding-bottom: .5em;
+		border: 1px solid #a2a2a2;
+		background-color: #f4f4f4;
+		-webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	@media (min-width: 769px) {
+
+		.header,
+		.main-nav {
+			display: flex;
+		}
+
+		.header {
+			flex-direction: column;
+			align-items: center;
+
+			.header {
+				width: 80%;
+				margin: 0 auto;
+				max-width: 1150px;
+			}
+		}
+
+	}
+
+	@media (min-width: 1025px) {
+		.header {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+	}
+</style>
+
+<body>
+
+	<header class="header">
+		<h1 class="logo"><a href="home">EXPLORE BLACK</a></h1>
+		<ul class="main-nav">
+			<ul class="main-nav">
+				<li><a href="home">History</a></li>
+				<li><a href="movies">Movies</a></li>
+				<li><a href="achieve">Achievements</a></li>
+				<li><a href="books">Books</a></li>
+				<li><a href="login">Join Community</a></li>
+			</ul>
+		</ul>
+	</header>
+
+	<div class="container">
+		<ul>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://cdn.britannica.com/59/94559-050-B368B6AF/Matthew-Henson-members-Robert-E-Peary-expedition-April-1909.jpg"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						African American Matthew Henson and Admiral Robert Peary, becoming
+						the first men to reach the North Pole in 1909.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://www.historycentral.com/AfiricanAmerican/Owen.jpg" width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Track star Jesse Owens winning four gold medals at the Berlin
+						Olympics in 1936.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Studio_publicity_Hattie_McDaniel.jpg"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Actress Hattie McDaniel receiving an Academy Award for Best
+						Supporting Actress in 1940.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Jackie_Robinson%2C_Brooklyn_Dodgers%2C_1954.jpg"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Jackie Robinson, of the Brooklyn Dodgers, becoming the first African
+						American to play major league baseball in 1947.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://www.pulitzer.org/cms/sites/default/files/content/bronzeville.jpg" width="100%"
+						height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Gwendolyn Brooks winning the Pulitzer Prize for poetry in 1950.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="data:image/jpeg;base64,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"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Barack Obama, a Harvard graduate, former Illinois state senator, and
+						former U.S. senator from Illinois, becoming president in 2009.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/07/1200/675/GettyImages-1034956476.jpg?ve=1&tl=1"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						The gas mask – Invented by Garrett Morgan in 1912, the gas mask
+						saved thousands of soldiers’ lives during World War I, when
+						poisonous gas was first used as a weapon. If that weren’t enough, he
+						also invented the modern traffic signal.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://cdn.britannica.com/79/5179-004-7C162DFE/Williams.jpg" width="100%"
+						height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Open-heart surgery – Daniel Hale Williams established the Provident
+						Hospital and Training School Association in Chicago, insisting on
+						the highest standards concerning sanitary conditions. In 1893, he
+						performed the first open-heart surgery, which was also the first
+						time a chest cavity had ever been opened without the patient dying
+						of an infection.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://www.brooksidemuseum.org/wp-content/uploads/2013/10/1991.118.0001-web.jpg"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Potato chips – Created by George Crum in 1853 while working at a
+						resort in Saratoga Springs, New York.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://th-thumbnailer.cdn-si-edu.com/2EqCbtFyWZWT8aId_qvMCWyhdsw=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/6d/fe/6dfeddd6-da2a-4c83-8958-2eba2d525ba9/lonnie_johnson-edit.jpg"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						The Supersoaker – After a successful career at NASA, Lonnie G.
+						Johnson invented the high-performance, pressurized water gun, which
+						became the #1 selling toy of the 1990s.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://grist.org/wp-content/uploads/2015/02/lewislatimer.jpg" width="100%"
+						height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						The light bulb – Edison may have invented the concept, but Lewis
+						Latimer added the carbon filament that made lightbulbs last longer
+						and made them commercially viable.
+					</h3>
+				</div>
+			</li>
+			<li style="		width: 200px;
+			height: 200px;
+			margin: 5px;">
+				<a class="normal" href="#">
+					<img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-52349303.jpg?crop=1xw:1.0xh;center,top&resize=640:*"
+						width="100%" height="100%" />
+					<svg viewBox="0 0 100 100" x="0px" y="0px"></svg>
+				</a>
+				<div class="info">
+					<h3>
+						Mobile communication – In 1887, Granville T. Woods invented the
+						induction telegraph, which allowed train-to-train and
+						train-to-station communication, preventing many rail accidents.
+					</h3>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+
+<script>
+	const nodes = [].slice.call(document.querySelectorAll("li"), 0);
+	const directions = { 0: "top", 1: "right", 2: "bottom", 3: "left" };
+	const classNames = ["in", "out"]
+		.map((p) => Object.values(directions).map((d) => `${p}-${d}`))
+		.reduce((a, b) => a.concat(b));
+
+	const getDirectionKey = (ev, node) => {
+		const { width, height, top, left } = node.getBoundingClientRect();
+		const l = ev.pageX - (left + window.pageXOffset);
+		const t = ev.pageY - (top + window.pageYOffset);
+		const x = l - (width / 2) * (width > height ? height / width : 1);
+		const y = t - (height / 2) * (height > width ? width / height : 1);
+		return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+	};
+
+	class Item {
+		constructor(element) {
+			this.element = element;
+			this.element.addEventListener("mouseover", (ev) => this.update(ev, "in"));
+			this.element.addEventListener("mouseout", (ev) => this.update(ev, "out"));
+		}
+
+		update(ev, prefix) {
+			this.element.classList.remove(...classNames);
+			this.element.classList.add(
+				`${prefix}-${directions[getDirectionKey(ev, this.element)]}`
+			);
+		}
+	}
+
+	nodes.forEach((node) => new Item(node));
+</script>
