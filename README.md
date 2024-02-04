@@ -30,3 +30,7 @@ The project taught us valuable lessons about user privacy, access control, and t
 
 In the future, we plan to enhance the community experience by introducing more interactive features, ensuring that blogs and real-time chat continue to be meaningful spaces for discussions and connections. We aim to refine the user experience based on community feedback, making **Explore Black** a dynamic and evolving platform for celebrating and uniting the Black community.
 
+## Demo
+
+https://www.youtube.com/watch?v=PD1FhCsGTuA
+
